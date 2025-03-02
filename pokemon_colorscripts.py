@@ -1,9 +1,5 @@
-#!/usr/bin/env python3
-
-import argparse
 import json
 import os
-import random
 import sys
 
 PROGRAM = os.path.realpath(__file__)
@@ -19,8 +15,6 @@ def print_file(filepath: str) -> None:
 def show_pokemon_by_name(name: str, form: str = "") -> None:
     base_path = COLORSCRIPTS_DIR
     color_subdir =  REGULAR_SUBDIR
-    # default to smaller size as this makes sense for most font size + terminal
-    # size combinations
     size_subdir =  SMALL_SUBDIR
     with open(f"{PROGRAM_DIR}/pokemon.json") as file:
         pokemon_json = json.load(file)
