@@ -67,15 +67,8 @@ def options(array: list[str], data: list):
         show_pokemon_by_name(array[0].lower())
 
 
-def game(gens: list[int]):
-    pokemon_data_map = create_map_from_csv()
-    filtered_data = [row for row in pokemon_data_map if gens[0] <= int(row[3]) <= gens[1]]
-    n_rand = random.randint(0, len(filtered_data)-1)
-    random_pokemon = filtered_data[n_rand]
-    print(random_pokemon[0]) # mostra o pokemon escolhido
-    tries = min(9, max(gens[1] - gens[0] + 2, 6))
-
-    type1 = "[ Type 1:"
+def print_results(results: list[str]):
+    type1 = "| Type 1:"
     type2 = "| Type 2:"
     gen = "| Gen:"
     hp = "| HP:"
@@ -85,6 +78,25 @@ def game(gens: list[int]):
     spd = "| Spd:"
     spe = "| Spe:"
     bst = "| BST:"
+    output = type1 + results[0] + type2 + results[1] + gen + results[2] + hp + results[3] + att + results[4] + deff + results[5] + spa + results[6] + spd + results[7] + spe + results[8] + bst + results[9] + "|"
+    '''print(" " + "_" * (len(output) - 2))
+    print("|" + " " * (len(output) - 2) + "|")
+    print(output)
+    print("|" + "_" * (len(output) - 2) + "|\n")'''
+    print(" " + "_" * 11 + " " + "_" * 11 + " " + "_" * 8 + " " + "_" * 7 + " " + "_" * 8 + " " + "_" * 8 + " " + "_" * 8 + " " + "_" * 8 + " " + "_" * 8 + " " + "_" * 8)
+    print("|" + " " * 11 + "|" + " " * 11 + "|" + " " * 8 + "|" + " " * 7 + "|" + " " * 8 + "|" + " " * 8 + "|" + " " * 8 + "|" + " " * 8 + "|" + " " * 8 + "|" + " " * 8 + "|")
+    print(output)
+    print("|" + "_" * 11 + "|" + "_" * 11 + "|" + "_" * 8 + "|" + "_" * 7 + "|" + "_" * 8 + "|" + "_" * 8 + "|" + "_" * 8 + "|" + "_" * 8 + "|" + "_" * 8 + "|" + "_" * 8 + "|\n")
+
+
+def game(gens: list[int]):
+    pokemon_data_map = create_map_from_csv()
+    filtered_data = [row for row in pokemon_data_map if gens[0] <= int(row[3]) <= gens[1]]
+    n_rand = random.randint(0, len(filtered_data)-1)
+    random_pokemon = filtered_data[n_rand]
+    print(random_pokemon[0]) # mostra o pokemon escolhido
+    tries = min(9, max(gens[1] - gens[0] + 2, 6))
+
     results = [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "]
     print("\nI have thought of a pokemon, try to guess it (you have " + str(tries) + " tries): ")
 
@@ -107,46 +119,43 @@ def game(gens: list[int]):
             guess = aux
             guessed_pokemon = next((row for row in filtered_data if row[0].lower() == guess.lower()), None)
             
-            if guessed_pokemon[0].lower() == random_pokemon[0].lower():
+            if guessed_pokemon == None:
+                print("\nPokemon not found, try again: ")
+                tries += 1
+            elif guessed_pokemon[0].lower() == random_pokemon[0].lower():
                 for i in range(10):
                     results[i] = " ✓ "
 
-                output = type1 + results[0] + type2 + results[1] + gen + results[2] + hp + results[3] + att + results[4] + deff + results[5] + spa + results[6] + spd + results[7] + spe + results[8] + bst + results[9] + "]"
-                print("\n" + output)
-                print("Congratulations, you guessed it right! It was " + random_pokemon[0] + "!")
+                print_results(results)
+                print("Congratulations, you guessed it right! It was " + random_pokemon[0] + "!\n")
                 show_pokemon_by_name(random_pokemon[0].lower())
                 break
-            else:  
-                if guessed_pokemon == None:
-                    print("\nPokemon not found, try again: ")
-                    tries += 1
-                else:    
-                    for i in range(2):
-                        if guessed_pokemon[i+1] == random_pokemon[i+1]:
-                            results[i] = " ✓ "
-                        else:
-                            results[i] = " x "
+            else:      
+                for i in range(2):
+                    if guessed_pokemon[i+1] == random_pokemon[i+1]:
+                        results[i] = " ✓ "
+                    else:
+                        results[i] = " x "
 
-                    if guessed_pokemon[1] == random_pokemon[2]:
-                        results[0] = " ⇄ "
-                    if guessed_pokemon[2] == random_pokemon[1]:
-                        results[1] = " ⇄ "
+                if guessed_pokemon[1] == random_pokemon[2]:
+                    results[0] = " ⇄ "
+                if guessed_pokemon[2] == random_pokemon[1]:
+                    results[1] = " ⇄ "
 
-                    for i in range(2, 10):
-                        if guessed_pokemon[i+1] < random_pokemon[i+1]:
-                            results[i] = " ↑ "
-                        elif guessed_pokemon[i+1] > random_pokemon[i+1]:
-                            results[i] = " ↓ "
-                        else:
-                            results[i] = " ✓ "
-                        i += 1
+                for i in range(2, 10):
+                    if guessed_pokemon[i+1] < random_pokemon[i+1]:
+                        results[i] = " ↑ "
+                    elif guessed_pokemon[i+1] > random_pokemon[i+1]:
+                        results[i] = " ↓ "
+                    else:
+                        results[i] = " ✓ "
+                    i += 1
 
-                    output = type1 + results[0] + type2 + results[1] + gen + results[2] + hp + results[3] + att + results[4] + deff + results[5] + spa + results[6] + spd + results[7] + spe + results[8] + bst + results[9] + "]"
-                    print("\n" + output)
+                print_results(results)
         print("You have " + str(tries) + " tries left")
 
     if tries == 0:
-        print("\nYou have run out of tries, the pokemon was " + random_pokemon[0] + ".")
+        print("\nYou have run out of tries, the pokemon was " + random_pokemon[0] + ".\n")
         show_pokemon_by_name(random_pokemon[0])
 
 
@@ -163,7 +172,7 @@ def main() -> int:
     elif aux == 'exit':
         return 0
 
-    print("\nChoose the generations you want the pokemon to be from (1-8): ")
+    print("Choose the generations you want the pokemon to be from (1-8): ")
     gens = choose_generations()
     if gens == [0, 0]:
         return 0
