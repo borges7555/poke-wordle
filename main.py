@@ -2,11 +2,18 @@ import csv
 import random
 from pokemon_colorscripts import show_pokemon_by_name
 
-def main() -> int:
-    pokemon_db_file = "pokemon_db.csv"
+def help():
+    print("\nThe goal of the game is to guess the pokemon I'm thinking of.")
+    print("You can guess the pokemon by typing their name.")
+    print("First, you have to choose the generations of the pokemon you want to guess.")
+    print("You can do this by typing the generation number (5) or a range of generations (2-6).")
+    print("If no input is given, it will choose a pokemon from generations 1-8.")
+    print("When inside the game, if you want to see the stats of a pokemon, type its name followed by ' -s'.")
+    print("You have a limited number of tries to guess the pokemon.")
 
-    def create_map_from_csv(file_path: str) -> list:
-        with open(file_path, mode='r') as file:
+
+def create_map_from_csv() -> list:
+        with open("pokemon_db.csv", mode='r') as file:
             csv_reader = csv.reader(file)
             data_map = []
             for row in csv_reader:
@@ -21,17 +28,44 @@ def main() -> int:
                 data_map.append(row)
         return data_map
 
-    pokemon_data_map = create_map_from_csv(pokemon_db_file)
-    print("Choose the generations you want (1-8): ")
+
+def choose_generations() -> list[int]:
     gen_input = input()
-    if not gen_input:
-        gens = [1, 8]
+    if gen_input == 'help':
+        help()
+        print("Press 'Enter' to continue.")
+        input()
+        print("\nChoose the generations you want the pokemon to be from (1-8): ")
+        return choose_generations()
+    elif gen_input == 'exit':
+        return [0, 0]
+    elif not gen_input:
+        return [1, 8]
     else:
         if '-' in gen_input:
-            gens = list(map(int, gen_input.split('-')))
+            if  1 <= gen_input.split('-')[0] <= 8 and 1 <= gen_input.split('-')[1] <= 8:
+                if gen_input.split('-')[0] <= gen_input.split('-')[1]:
+                    return [int(gen_input.split('-')[0]), int(gen_input.split('-')[1])]
+                else:
+                    return [int(gen_input.split('-')[1]), int(gen_input.split('-')[0])]
+            else:
+                print("\nThe generaions available are only 1-8, try again: ")
+                return choose_generations()
         else:
-            gens = [int(gen_input), int(gen_input)]
+            if 1 <= int(gen_input) <= 8:
+                return [int(gen_input), int(gen_input)]
+            else:
+                print("\nThe generaions available are only 1-8, try again: ")
+                return choose_generations()  
 
+
+def options(array: list[str], data: list):
+    if array[1] == '-s':
+        print(next((row for row in data if row[0].lower() == array[0].lower()), None))
+
+
+def game(gens: list[int]):
+    pokemon_data_map = create_map_from_csv()
     filtered_data = [row for row in pokemon_data_map if gens[0] <= int(row[3]) <= gens[1]]
     n_rand = random.randint(0, len(filtered_data)-1)
     random_pokemon = filtered_data[n_rand]
@@ -48,62 +82,92 @@ def main() -> int:
     spd = "| Spd:"
     spe = "| Spe:"
     bst = "| BST:"
-    print("I have thought of a pokemon, try to guess it (you have " + str(tries) + " tries): ")
+    results = ["", "", "", "", "", "", "", "", "", ""]
 
     while(tries > 0):
+        print("\nI have thought of a pokemon, try to guess it (you have " + str(tries) + " tries): ")
         tries -= 1
         aux = input()
 
-        if ' -' in aux:
-            guess = aux.split(' ')
+        if aux == 'help':
+            help()
+            tries += 1
+            print("Press 'Enter' to continue.")
+            input()
+        elif aux == 'exit':
+            tries += 1
+            break
+        elif ' -' in aux:
+            options(aux.split(' '), filtered_data)
+            tries += 1
         else:
-            guess = [aux]
+            guess = aux
+            output = type1 + results[0] + type2 + results[1] + gen + results[2] + hp + results[3] + att + results[4] + deff + results[5] + spa + results[6] + spd + results[7] + spe + results[8] + bst + results[9] + "]"
+            guessed_pokemon = next((row for row in filtered_data if row[0].lower() == guess.lower()), None)
+            
+            if guessed_pokemon[0].lower() == random_pokemon[0].lower():
+                for i in range(10):
+                    results[i] = " ✓ "
 
-        results = ["", "", "", "", "", "", "", "", "", ""]
-        guessed_pokemon = next((row for row in filtered_data if row[0].lower() == guess[0].lower()), None)
-        
-        if guess[0].lower() == random_pokemon[0].lower():
-            for i in range(10):
-                results[i] = " ✓ "
-            print(type1 + results[0] + type2 + results[1] + gen + results[2] + hp + results[3] + att + results[4] + deff + results[5] + spa + results[6] + spd + results[7] + spe + results[8] + bst + results[9] + "]")
-            print("Congratulations, you guessed it right! It was " + random_pokemon[0])
-            show_pokemon_by_name(random_pokemon[0].lower())
-            return 0
-        else:  
-            if guessed_pokemon == None:
-                print("Pokemon not found, try again")
-                tries += 1
-            elif len(guess) == 2:
-                if guess[1] == '-s':
-                    print(guessed_pokemon)
+                print("\n" + output)
+                print("Congratulations, you guessed it right! It was " + random_pokemon[0] + "!")
+                show_pokemon_by_name(random_pokemon[0].lower())
+                break
+            else:  
+                if guessed_pokemon == None:
+                    print("\nPokemon not found, try again: ")
                     tries += 1
-            else:    
-                for i in range(2):
-                    if guessed_pokemon[i+1] == random_pokemon[i+1]:
-                        results[i] = " ✓ "
-                    else:
-                        results[i] = " x "
+                else:    
+                    for i in range(2):
+                        if guessed_pokemon[i+1] == random_pokemon[i+1]:
+                            results[i] = " ✓ "
+                        else:
+                            results[i] = " x "
 
-                if guessed_pokemon[1] == random_pokemon[2]:
-                    results[0] = " ⇄ "
-                if guessed_pokemon[2] == random_pokemon[1]:
-                    results[1] = " ⇄ "
+                    if guessed_pokemon[1] == random_pokemon[2]:
+                        results[0] = " ⇄ "
+                    if guessed_pokemon[2] == random_pokemon[1]:
+                        results[1] = " ⇄ "
 
-                for i in range(2, 10):
-                    if guessed_pokemon[i+1] < random_pokemon[i+1]:
-                        results[i] = " ↑ "
-                    elif guessed_pokemon[i+1] > random_pokemon[i+1]:
-                        results[i] = " ↓ "
-                    else:
-                        results[i] = " ✓ "
-                    i += 1
+                    for i in range(2, 10):
+                        if guessed_pokemon[i+1] < random_pokemon[i+1]:
+                            results[i] = " ↑ "
+                        elif guessed_pokemon[i+1] > random_pokemon[i+1]:
+                            results[i] = " ↓ "
+                        else:
+                            results[i] = " ✓ "
+                        i += 1
 
-                print(type1 + results[0] + type2 + results[1] + gen + results[2] + hp + results[3] + att + results[4] + deff + results[5] + spa + results[6] + spd + results[7] + spe + results[8] + bst + results[9] + "]")
-                print("You have " + str(tries) + " tries left")
+                    print("\n" + output)
+                    print("You have " + str(tries) + " tries left")
 
-    print("You have run out of tries, the pokemon was " + random_pokemon[0])
-    show_pokemon_by_name(random_pokemon[0])
+    if tries == 0:
+        print("\nYou have run out of tries, the pokemon was " + random_pokemon[0] + ".")
+        show_pokemon_by_name(random_pokemon[0])
+
+
+def main() -> int:
+    print("Welcome to the Pokemon Wordle!")
+    print("Type 'help' for instructions, 'exit' to leave or press 'Enter' to start the game.")
+    aux = input()
+
+    if aux == 'help':
+        help()
+        print("If you want to see this again, type 'help'.")
+        print("Press 'Enter' to start the game.")
+        input()
+    elif aux == 'exit':
+        return 0
+
+    print("\nChoose the generations you want the pokemon to be from (1-8): ")
+    gens = choose_generations()
+    if gens == [0, 0]:
+        return 0
+    else:
+        game(gens)
+        
     return 0
+
 
 if __name__ == "__main__":
     main()
