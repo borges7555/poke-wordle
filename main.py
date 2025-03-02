@@ -9,6 +9,7 @@ def help():
     print("You can do this by typing the generation number (5) or a range of generations (2-6).")
     print("If no input is given, it will choose a pokemon from generations 1-8.")
     print("When inside the game, if you want to see the stats of a pokemon, type its name followed by ' -s'.")
+    print("If you want to see the pokemon's picture, type its name followed by ' -p'.")
     print("You have a limited number of tries to guess the pokemon.")
 
 
@@ -61,7 +62,9 @@ def choose_generations() -> list[int]:
 
 def options(array: list[str], data: list):
     if array[1] == '-s':
-        print(next((row for row in data if row[0].lower() == array[0].lower()), None))
+        print("\n" + next((row for row in data if row[0].lower() == array[0].lower()), None))
+    if array[1] == '-p':
+        show_pokemon_by_name(array[0].lower())
 
 
 def game(gens: list[int]):
@@ -69,7 +72,7 @@ def game(gens: list[int]):
     filtered_data = [row for row in pokemon_data_map if gens[0] <= int(row[3]) <= gens[1]]
     n_rand = random.randint(0, len(filtered_data)-1)
     random_pokemon = filtered_data[n_rand]
-    #print(random_pokemon[0])
+    print(random_pokemon[0]) # mostra o pokemon escolhido
     tries = min(9, max(gens[1] - gens[0] + 2, 6))
 
     type1 = "[ Type 1:"
@@ -82,10 +85,10 @@ def game(gens: list[int]):
     spd = "| Spd:"
     spe = "| Spe:"
     bst = "| BST:"
-    results = ["", "", "", "", "", "", "", "", "", ""]
+    results = [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "]
+    print("\nI have thought of a pokemon, try to guess it (you have " + str(tries) + " tries): ")
 
-    while(tries > 0):
-        print("\nI have thought of a pokemon, try to guess it (you have " + str(tries) + " tries): ")
+    while(tries > 0):   
         tries -= 1
         aux = input()
 
@@ -102,13 +105,13 @@ def game(gens: list[int]):
             tries += 1
         else:
             guess = aux
-            output = type1 + results[0] + type2 + results[1] + gen + results[2] + hp + results[3] + att + results[4] + deff + results[5] + spa + results[6] + spd + results[7] + spe + results[8] + bst + results[9] + "]"
             guessed_pokemon = next((row for row in filtered_data if row[0].lower() == guess.lower()), None)
             
             if guessed_pokemon[0].lower() == random_pokemon[0].lower():
                 for i in range(10):
                     results[i] = " ✓ "
 
+                output = type1 + results[0] + type2 + results[1] + gen + results[2] + hp + results[3] + att + results[4] + deff + results[5] + spa + results[6] + spd + results[7] + spe + results[8] + bst + results[9] + "]"
                 print("\n" + output)
                 print("Congratulations, you guessed it right! It was " + random_pokemon[0] + "!")
                 show_pokemon_by_name(random_pokemon[0].lower())
@@ -138,8 +141,9 @@ def game(gens: list[int]):
                             results[i] = " ✓ "
                         i += 1
 
+                    output = type1 + results[0] + type2 + results[1] + gen + results[2] + hp + results[3] + att + results[4] + deff + results[5] + spa + results[6] + spd + results[7] + spe + results[8] + bst + results[9] + "]"
                     print("\n" + output)
-                    print("You have " + str(tries) + " tries left")
+        print("You have " + str(tries) + " tries left")
 
     if tries == 0:
         print("\nYou have run out of tries, the pokemon was " + random_pokemon[0] + ".")
