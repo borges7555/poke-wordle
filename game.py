@@ -9,7 +9,7 @@ def game(gens: list[int]):
     filtered_data = [row for row in pokemon_data_map if gens[0] <= int(row[3]) <= gens[1]]
     n_rand = random.randint(0, len(filtered_data)-1)
     random_pokemon = filtered_data[n_rand]
-    print(random_pokemon[0]) # mostra o pokemon escolhido
+    print(random_pokemon[0]) # Debugging purposes
     tries = min(9, max(gens[1] - gens[0] + 2, 6))
 
     results = [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "]
