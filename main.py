@@ -1,6 +1,6 @@
 import csv
 import random
-import os
+from pokemon_colorscripts import show_pokemon_by_name
 
 def main() -> int:
     pokemon_db_file = "pokemon_db.csv"
@@ -33,7 +33,7 @@ def main() -> int:
             gens = [int(gen_input), int(gen_input)]
 
     filtered_data = [row for row in pokemon_data_map if gens[0] <= int(row[3]) <= gens[1]]
-    n_rand = random.randint(1, len(filtered_data))
+    n_rand = random.randint(0, len(filtered_data)-1)
     random_pokemon = filtered_data[n_rand]
     #print(random_pokemon[0])
     tries = min(9, max(gens[1] - gens[0] + 2, 6))
@@ -52,22 +52,32 @@ def main() -> int:
 
     while(tries > 0):
         tries -= 1
-        guess = input()
+        aux = input()
+
+        if ' -' in aux:
+            guess = aux.split(' ')
+        else:
+            guess = [aux]
+
         results = ["", "", "", "", "", "", "", "", "", ""]
-        guessed_pokemon = next((row for row in filtered_data if row[0].lower() == guess.lower()), None)
+        guessed_pokemon = next((row for row in filtered_data if row[0].lower() == guess[0].lower()), None)
         
-        if guess.lower() == random_pokemon[0].lower():
+        if guess[0].lower() == random_pokemon[0].lower():
             for i in range(10):
                 results[i] = " ✓ "
             print(type1 + results[0] + type2 + results[1] + gen + results[2] + hp + results[3] + att + results[4] + deff + results[5] + spa + results[6] + spd + results[7] + spe + results[8] + bst + results[9] + "]")
             print("Congratulations, you guessed it right! It was " + random_pokemon[0])
-            os.system(f"pokemon-colorscripts -n {random_pokemon[0].lower()} --no-title")
+            show_pokemon_by_name(random_pokemon[0].lower())
             return 0
         else:  
             if guessed_pokemon == None:
                 print("Pokemon not found, try again")
                 tries += 1
-            else:
+            elif len(guess) == 2:
+                if guess[1] == '-s':
+                    print(guessed_pokemon)
+                    tries += 1
+            else:    
                 for i in range(2):
                     if guessed_pokemon[i+1] == random_pokemon[i+1]:
                         results[i] = " ✓ "
@@ -92,6 +102,7 @@ def main() -> int:
                 print("You have " + str(tries) + " tries left")
 
     print("You have run out of tries, the pokemon was " + random_pokemon[0])
+    show_pokemon_by_name(random_pokemon[0])
     return 0
 
 if __name__ == "__main__":
