@@ -28,7 +28,7 @@ def game(gens: list[int]):
             tries += 1
             break
         elif ' -' in aux:
-            options(aux.split(' -'), filtered_data)
+            options(aux.split(' -'), filtered_data, tries)
             tries += 1
         else:
             guess = aux

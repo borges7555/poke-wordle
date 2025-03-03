@@ -5,6 +5,10 @@ def show_picture(name: str):
         show_pokemon_by_name(name.split(" ")[1], "alola")
     elif "galarian" in name:
         show_pokemon_by_name(name.split(" ")[1], "galar")
+    elif "hisuian" in name:
+        show_pokemon_by_name(name.split(" ")[1], "hisui")
+    elif "paldean" in name:
+        show_pokemon_by_name(name.split(" ")[1], "paldea")
     elif "mega" in name:
         if len(name.split(" ")) == 2:
             show_pokemon_by_name(name.split(" ")[1], "mega")

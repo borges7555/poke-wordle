@@ -6,6 +6,7 @@ def help():
     print("If no input is given, it will choose a pokemon from generations 1-8.")
     print("When inside the game, if you want to see the stats of a pokemon, type its name followed by ' -s' or '--stats.")
     print("If you want to see the pokemon's picture, type its name followed by ' -p' or '--picture'.")
+    print("If you want to see a list of pokemons that contain a certain string, type the string followed by ' -l' or '--list'.")
     print("You have a limited number of tries to guess the pokemon.")  
 
 
