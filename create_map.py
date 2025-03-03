@@ -12,6 +12,5 @@ def create_map_from_csv() -> list:
             row[7] = int(row[7])  # Spa
             row[8] = int(row[8])  # Spd
             row[9] = int(row[9])  # Spe
-            row[10] = int(row[10])  # BST
             data_map.append(row)
     return data_map

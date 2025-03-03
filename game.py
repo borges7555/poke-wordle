@@ -57,7 +57,7 @@ def game(gens: list[int]):
                 if guessed_pokemon[2] == random_pokemon[1]:
                     results[1] = " ⇄ "
 
-                for i in range(2, 10):
+                for i in range(2, 9):
                     if guessed_pokemon[i+1] < random_pokemon[i+1]:
                         results[i] = " ↑ "
                     elif guessed_pokemon[i+1] > random_pokemon[i+1]:

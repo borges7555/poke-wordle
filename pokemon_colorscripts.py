@@ -22,7 +22,7 @@ def show_pokemon_by_name(name: str, form: str = "") -> None:
         pokemon_names = {pokemon["name"] for pokemon in pokemon_json}
         if name not in pokemon_names:
             print(f"Couldn't show picture of {name}")
-            sys.exit(1)
+            return
 
         if form:
             for pokemon in pokemon_json:
@@ -39,6 +39,6 @@ def show_pokemon_by_name(name: str, form: str = "") -> None:
                     print(f"Available alternate forms are")
                     for form in alternate_forms:
                         print(f"- {form}")
-                sys.exit(1)
+                return
     pokemon_file = f"{base_path}/{size_subdir}/{color_subdir}/{name}"
     print_file(pokemon_file)

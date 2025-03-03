@@ -15,7 +15,7 @@ def main() -> int:
     elif aux == 'exit':
         return 0
 
-    print("Choose the generations you want the pokemon to be from (1-8): ")
+    print("Choose the generations you want the pokemon to be from (1-9): ")
     gens = choose_generations()
     if gens == [0, 0]:
         return 0
