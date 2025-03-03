@@ -159,22 +159,7 @@
     "name": "pikachu",
     "forms": [
       "regular",
-      "alola-cap",
-      "belle",
-      "cosplay",
-      "gmax",
-      "hoenn-cap",
-      "kalos-cap",
-      "libre",
-      "original-cap",
-      "partner-cap",
-      "phd",
-      "pop-star",
-      "rock-star",
-      "sinnoh-cap",
-      "starter",
-      "unova-cap",
-      "world-cap"
+      "gmax"
     ]
   },
   {
@@ -391,8 +376,7 @@
     "name": "arcanine",
     "forms": [
       "regular",
-      "hisui",
-      "hisui-noble"
+      "hisui"
     ]
   },
   {
@@ -662,8 +646,7 @@
     "name": "electrode",
     "forms": [
       "regular",
-      "hisui",
-      "hisui-noble"
+      "hisui"
     ]
   },
   {
@@ -831,7 +814,8 @@
   {
     "name": "tauros",
     "forms": [
-      "regular"
+      "regular",
+      "paldea"
     ]
   },
   {
@@ -864,8 +848,7 @@
     "name": "eevee",
     "forms": [
       "regular",
-      "gmax",
-      "starter"
+      "gmax"
     ]
   },
   {
@@ -1107,8 +1090,7 @@
   {
     "name": "pichu",
     "forms": [
-      "regular",
-      "spiky-eared"
+      "regular"
     ]
   },
   {
@@ -1241,7 +1223,8 @@
   {
     "name": "wooper",
     "forms": [
-      "regular"
+      "regular",
+      "paldea"
     ]
   },
   {
@@ -1284,34 +1267,7 @@
   {
     "name": "unown",
     "forms": [
-      "regular",
-      "b",
-      "c",
-      "d",
-      "e",
-      "exclamation",
-      "f",
-      "g",
-      "h",
-      "i",
-      "j",
-      "k",
-      "l",
-      "m",
-      "n",
-      "o",
-      "p",
-      "q",
-      "question",
-      "r",
-      "s",
-      "t",
-      "u",
-      "v",
-      "w",
-      "x",
-      "y",
-      "z"
+      "regular"
     ]
   },
   {
@@ -1607,8 +1563,7 @@
   {
     "name": "lugia",
     "forms": [
-      "regular",
-      "shadow"
+      "regular"
     ]
   },
   {
@@ -2089,9 +2044,7 @@
   {
     "name": "spinda",
     "forms": [
-      "regular",
-      "blank",
-      "filled"
+      "regular"
     ]
   },
   {
@@ -2236,10 +2189,7 @@
   {
     "name": "castform",
     "forms": [
-      "regular",
-      "rainy",
-      "snowy",
-      "sunny"
+      "regular"
     ]
   },
   {
@@ -2459,10 +2409,7 @@
   {
     "name": "deoxys",
     "forms": [
-      "regular",
-      "attack",
-      "defense",
-      "speed"
+      "regular"
     ]
   },
   {
@@ -2618,17 +2565,13 @@
   {
     "name": "burmy",
     "forms": [
-      "regular",
-      "sandy",
-      "trash"
+      "regular"
     ]
   },
   {
     "name": "wormadam",
     "forms": [
-      "regular",
-      "sandy",
-      "trash"
+      "regular"
     ]
   },
   {
@@ -2676,22 +2619,19 @@
   {
     "name": "cherrim",
     "forms": [
-      "regular",
-      "sunshine"
+      "regular"
     ]
   },
   {
     "name": "shellos",
     "forms": [
-      "regular",
-      "east"
+      "regular"
     ]
   },
   {
     "name": "gastrodon",
     "forms": [
-      "regular",
-      "east"
+      "regular"
     ]
   },
   {
@@ -3032,12 +2972,7 @@
   {
     "name": "rotom",
     "forms": [
-      "regular",
-      "fan",
-      "frost",
-      "heat",
-      "mow",
-      "wash"
+      "regular"
     ]
   },
   {
@@ -3061,15 +2996,13 @@
   {
     "name": "dialga",
     "forms": [
-      "regular",
-      "origin"
+      "regular"
     ]
   },
   {
     "name": "palkia",
     "forms": [
-      "regular",
-      "origin"
+      "regular"
     ]
   },
   {
@@ -3087,8 +3020,7 @@
   {
     "name": "giratina",
     "forms": [
-      "regular",
-      "origin"
+      "regular"
     ]
   },
   {
@@ -3118,32 +3050,13 @@
   {
     "name": "shaymin",
     "forms": [
-      "regular",
-      "sky"
+      "regular"
     ]
   },
   {
     "name": "arceus",
     "forms": [
-      "regular",
-      "bug",
-      "dark",
-      "dragon",
-      "electric",
-      "fairy",
-      "fighting",
-      "fire",
-      "flying",
-      "ghost",
-      "grass",
-      "ground",
-      "ice",
-      "poison",
-      "psychic",
-      "rock",
-      "steel",
-      "unknown",
-      "water"
+      "regular"
     ]
   },
   {
@@ -3482,16 +3395,13 @@
     "name": "lilligant",
     "forms": [
       "regular",
-      "hisui",
-      "hisui-noble"
+      "hisui"
     ]
   },
   {
     "name": "basculin",
     "forms": [
-      "regular",
-      "blue-striped",
-      "white-striped"
+      "regular"
     ]
   },
   {
@@ -3523,9 +3433,7 @@
     "name": "darmanitan",
     "forms": [
       "regular",
-      "galar",
-      "galar-zen",
-      "zen"
+      "galar"
     ]
   },
   {
@@ -3709,19 +3617,13 @@
   {
     "name": "deerling",
     "forms": [
-      "regular",
-      "autumn",
-      "summer",
-      "winter"
+      "regular"
     ]
   },
   {
     "name": "sawsbuck",
     "forms": [
-      "regular",
-      "autumn",
-      "summer",
-      "winter"
+      "regular"
     ]
   },
   {
@@ -4086,33 +3988,25 @@
   {
     "name": "kyurem",
     "forms": [
-      "regular",
-      "black",
-      "white"
+      "regular"
     ]
   },
   {
     "name": "keldeo",
     "forms": [
-      "regular",
-      "resolute"
+      "regular"
     ]
   },
   {
     "name": "meloetta",
     "forms": [
-      "regular",
-      "pirouette"
+      "regular"
     ]
   },
   {
     "name": "genesect",
     "forms": [
-      "regular",
-      "burn",
-      "chill",
-      "douse",
-      "shock"
+      "regular"
     ]
   },
   {
@@ -4166,8 +4060,7 @@
   {
     "name": "greninja",
     "forms": [
-      "regular",
-      "ash"
+      "regular"
     ]
   },
   {
@@ -4215,26 +4108,7 @@
   {
     "name": "vivillon",
     "forms": [
-      "regular",
-      "archipelago",
-      "continental",
-      "elegant",
-      "fancy",
-      "garden",
-      "high-plains",
-      "icy-snow",
-      "jungle",
-      "marine",
-      "modern",
-      "monsoon",
-      "ocean",
-      "poke-ball",
-      "polar",
-      "river",
-      "sandstorm",
-      "savanna",
-      "sun",
-      "tundra"
+      "regular"
     ]
   },
   {
@@ -4252,32 +4126,19 @@
   {
     "name": "flabebe",
     "forms": [
-      "regular",
-      "blue",
-      "orange",
-      "white",
-      "yellow"
+      "regular"
     ]
   },
   {
     "name": "floette",
     "forms": [
-      "regular",
-      "blue",
-      "eternal",
-      "orange",
-      "white",
-      "yellow"
+      "regular"
     ]
   },
   {
     "name": "florges",
     "forms": [
-      "regular",
-      "blue",
-      "orange",
-      "white",
-      "yellow"
+      "regular"
     ]
   },
   {
@@ -4307,16 +4168,7 @@
   {
     "name": "furfrou",
     "forms": [
-      "regular",
-      "dandy",
-      "debutante",
-      "diamond",
-      "heart",
-      "kabuki",
-      "la-reine",
-      "matron",
-      "pharaoh",
-      "star"
+      "regular"
     ]
   },
   {
@@ -4346,8 +4198,7 @@
   {
     "name": "aegislash",
     "forms": [
-      "regular",
-      "blade"
+      "regular"
     ]
   },
   {
@@ -4523,10 +4374,7 @@
   {
     "name": "pumpkaboo",
     "forms": [
-      "regular",
-      "large",
-      "small",
-      "super"
+      "regular"
     ]
   },
   {
@@ -4545,8 +4393,7 @@
     "name": "avalugg",
     "forms": [
       "regular",
-      "hisui",
-      "hisui-noble"
+      "hisui"
     ]
   },
   {
@@ -4564,8 +4411,7 @@
   {
     "name": "xerneas",
     "forms": [
-      "regular",
-      "active"
+      "regular"
     ]
   },
   {
@@ -4577,9 +4423,7 @@
   {
     "name": "zygarde",
     "forms": [
-      "regular",
-      "10",
-      "complete"
+      "regular"
     ]
   },
   {
@@ -4720,10 +4564,7 @@
   {
     "name": "oricorio",
     "forms": [
-      "regular",
-      "pau",
-      "pom-pom",
-      "sensu"
+      "regular"
     ]
   },
   {
@@ -4747,16 +4588,13 @@
   {
     "name": "lycanroc",
     "forms": [
-      "regular",
-      "dusk",
-      "midnight"
+      "regular"
     ]
   },
   {
     "name": "wishiwashi",
     "forms": [
-      "regular",
-      "school"
+      "regular"
     ]
   },
   {
@@ -4918,44 +4756,13 @@
   {
     "name": "silvally",
     "forms": [
-      "regular",
-      "bug",
-      "dark",
-      "dragon",
-      "electric",
-      "fairy",
-      "fighting",
-      "fire",
-      "flying",
-      "ghost",
-      "grass",
-      "ground",
-      "ice",
-      "poison",
-      "psychic",
-      "rock",
-      "steel",
-      "water"
+      "regular"
     ]
   },
   {
     "name": "minior",
     "forms": [
-      "regular",
-      "blue",
-      "blue-gen7",
-      "green",
-      "green-gen7",
-      "indigo",
-      "indigo-gen7",
-      "orange",
-      "orange-gen7",
-      "red",
-      "red-gen7",
-      "violet",
-      "violet-gen7",
-      "yellow",
-      "yellow-gen7"
+      "regular"
     ]
   },
   {
@@ -5111,24 +4918,19 @@
   {
     "name": "necrozma",
     "forms": [
-      "regular",
-      "dawn",
-      "dusk",
-      "ultra"
+      "regular"
     ]
   },
   {
     "name": "magearna",
     "forms": [
-      "regular",
-      "original"
+      "regular"
     ]
   },
   {
     "name": "marshadow",
     "forms": [
-      "regular",
-      "gen7"
+      "regular"
     ]
   },
   {
@@ -5396,9 +5198,7 @@
   {
     "name": "cramorant",
     "forms": [
-      "regular",
-      "gorging",
-      "gulping"
+      "regular"
     ]
   },
   {
@@ -5423,8 +5223,7 @@
     "name": "toxtricity",
     "forms": [
       "regular",
-      "gmax",
-      "low-key"
+      "gmax"
     ]
   },
   {
@@ -5548,79 +5347,7 @@
     "name": "alcremie",
     "forms": [
       "regular",
-      "caramel-swirl-berry",
-      "caramel-swirl-clover",
-      "caramel-swirl-flower",
-      "caramel-swirl-love",
-      "caramel-swirl-plain",
-      "caramel-swirl-ribbon",
-      "caramel-swirl-star",
-      "caramel-swirl-strawberry",
-      "gmax",
-      "lemon-cream-berry",
-      "lemon-cream-clover",
-      "lemon-cream-flower",
-      "lemon-cream-love",
-      "lemon-cream-plain",
-      "lemon-cream-ribbon",
-      "lemon-cream-star",
-      "lemon-cream-strawberry",
-      "matcha-cream-berry",
-      "matcha-cream-clover",
-      "matcha-cream-flower",
-      "matcha-cream-love",
-      "matcha-cream-plain",
-      "matcha-cream-ribbon",
-      "matcha-cream-star",
-      "matcha-cream-strawberry",
-      "mint-cream-berry",
-      "mint-cream-clover",
-      "mint-cream-flower",
-      "mint-cream-love",
-      "mint-cream-plain",
-      "mint-cream-ribbon",
-      "mint-cream-star",
-      "mint-cream-strawberry",
-      "rainbow-swirl-berry",
-      "rainbow-swirl-clover",
-      "rainbow-swirl-flower",
-      "rainbow-swirl-love",
-      "rainbow-swirl-plain",
-      "rainbow-swirl-ribbon",
-      "rainbow-swirl-star",
-      "rainbow-swirl-strawberry",
-      "ruby-cream-berry",
-      "ruby-cream-clover",
-      "ruby-cream-flower",
-      "ruby-cream-love",
-      "ruby-cream-plain",
-      "ruby-cream-ribbon",
-      "ruby-cream-star",
-      "ruby-cream-strawberry",
-      "ruby-swirl-berry",
-      "ruby-swirl-clover",
-      "ruby-swirl-flower",
-      "ruby-swirl-love",
-      "ruby-swirl-plain",
-      "ruby-swirl-ribbon",
-      "ruby-swirl-star",
-      "ruby-swirl-strawberry",
-      "salted-cream-berry",
-      "salted-cream-clover",
-      "salted-cream-flower",
-      "salted-cream-love",
-      "salted-cream-plain",
-      "salted-cream-ribbon",
-      "salted-cream-star",
-      "salted-cream-strawberry",
-      "vanilla-cream-berry",
-      "vanilla-cream-clover",
-      "vanilla-cream-flower",
-      "vanilla-cream-love",
-      "vanilla-cream-plain",
-      "vanilla-cream-ribbon",
-      "vanilla-cream-star",
-      "vanilla-cream-strawberry"
+      "gmax"
     ]
   },
   {
@@ -5656,8 +5383,7 @@
   {
     "name": "eiscue",
     "forms": [
-      "regular",
-      "noice"
+      "regular"
     ]
   },
   {
@@ -5669,8 +5395,7 @@
   {
     "name": "morpeko",
     "forms": [
-      "regular",
-      "hangry"
+      "regular"
     ]
   },
   {
@@ -5738,22 +5463,19 @@
   {
     "name": "zacian",
     "forms": [
-      "regular",
-      "crowned"
+      "regular"
     ]
   },
   {
     "name": "zamazenta",
     "forms": [
-      "regular",
-      "crowned"
+      "regular"
     ]
   },
   {
     "name": "eternatus",
     "forms": [
-      "regular",
-      "eternamax"
+      "regular"
     ]
   },
   {
@@ -5766,15 +5488,13 @@
     "name": "urshifu",
     "forms": [
       "regular",
-      "gmax",
-      "rapid-strike-gmax"
+      "gmax"
     ]
   },
   {
     "name": "zarude",
     "forms": [
-      "regular",
-      "dada"
+      "regular"
     ]
   },
   {
@@ -5804,9 +5524,7 @@
   {
     "name": "calyrex",
     "forms": [
-      "regular",
-      "ice-rider",
-      "shadow-rider"
+      "regular"
     ]
   },
   {
@@ -5818,8 +5536,7 @@
   {
     "name": "kleavor",
     "forms": [
-      "regular",
-      "noble"
+      "regular"
     ]
   },
   {
@@ -5851,6 +5568,636 @@
     "forms": [
       "regular",
       "therian"
+    ]
+  },
+  {
+    "name": "sprigatito",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "floragato",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "meowscarada",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "fuecoco",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "crocalor",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "skeledirge",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "quaxly",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "quaxwell",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "quaquaval",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "lechonk",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "oinkologne",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "tarountula",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "spidops",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "nymble",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "lokix",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "pawmi",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "pawmo",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "pawmot",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "tandemaus",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "maushold",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "fidough",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "dachsbun",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "smoliv",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "dolliv",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "arboliva",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "squawkabilly",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "nacli",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "naclstack",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "garganacl",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "charcadet",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "armarouge",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "ceruledge",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "tadbulb",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "bellibolt",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "wattrel",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "kilowattrel",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "maschiff",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "mabosstiff",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "shroodle",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "grafaiai",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "bramblin",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "brambleghast",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "toedscool",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "toedscruel",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "klawf",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "capsakid",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "scovillain",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "rellor",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "rabsca",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "flittle",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "espathra",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "tinkatink",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "tinkatuff",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "tinkaton",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "wiglett",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "wugtrio",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "bombirdier",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "finizen",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "palafin",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "varoom",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "revavroom",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "cyclizar",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "orthworm",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "glimmet",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "glimmora",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "greavard",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "houndstone",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "flamigo",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "cetoddle",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "cetitan",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "veluza",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "dondozo",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "tatsugiri",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "annihilape",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "clodsire",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "farigiraf",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "dudunsparce",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "kingambit",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "great-tusk",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "scream-tail",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "brute-bonnet",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "flutter-mane",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "slither-wing",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "sandy-shocks",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "iron-treads",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "iron-bundle",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "iron-hands",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "iron-jugulis",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "iron-moth",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "iron-thorns",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "frigibax",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "arctibax",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "baxcalibur",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "gimmighoul",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "gholdengo",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "wo-chien",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "chien-pao",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "ting-lu",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "chi-yu",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "roaring-moon",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "iron-valiant",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "koraidon",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "miraidon",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "walking-wake",
+    "forms": [
+      "regular"
+    ]
+  },
+  {
+    "name": "iron-leaves",
+    "forms": [
+      "regular"
     ]
   }
 ]
