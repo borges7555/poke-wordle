@@ -1,7 +1,19 @@
 import csv
+import os
+import sys
+
+def get_file_path(filename):
+    """Get the correct path for data files in PyInstaller."""
+    if getattr(sys, 'frozen', False):  # Running as an executable
+        base_path = sys._MEIPASS  # The temporary folder PyInstaller uses
+    else:
+        base_path = os.path.dirname(__file__)  # Normal execution, use current directory
+
+    return os.path.join(base_path, filename)
 
 def create_map_from_csv() -> list:
-    with open("pokemon_db.csv", mode='r') as file:
+    path = get_file_path("pokemon_db.csv")
+    with open(path, mode='r', encoding="utf-8") as file:
         csv_reader = csv.reader(file)
         data_map = []
         for row in csv_reader:

@@ -13,6 +13,7 @@ def options(array: list[str], data: list, tries: int):
         else:
     '''
     if array[1] in ['l', '-list']:
+        print("")
         for i in data:
             if array[0] in i[0].lower():
                 print(i[0])

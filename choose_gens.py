@@ -1,3 +1,5 @@
+from prints import help
+
 def choose_generations() -> list[int]:
     gen_input = input()
     if gen_input == 'help':
@@ -21,7 +23,7 @@ def choose_generations() -> list[int]:
                 print("\nThe generaions available are only 1-9, try again: ")
                 return choose_generations()
         else:
-            if 9 <= int(gen_input) <= 9:
+            if 1 <= int(gen_input) <= 9:
                 return [int(gen_input), int(gen_input)]
             else:
                 print("\nThe generaions available are only 1-9, try again: ")

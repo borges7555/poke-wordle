@@ -1,6 +1,5 @@
 import json
 import os
-import sys
 
 PROGRAM = os.path.realpath(__file__)
 PROGRAM_DIR = os.path.dirname(PROGRAM)
