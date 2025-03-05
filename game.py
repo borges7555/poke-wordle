@@ -1,7 +1,7 @@
 import random
 from create_map import create_map_from_csv
 from prints import help, print_results
-from options import options
+from options import options, dex
 from show_pic import show_picture
 
 def game(gens: list[int]):
@@ -9,16 +9,27 @@ def game(gens: list[int]):
     filtered_data = [row for row in pokemon_data_map if gens[0] <= int(row[3]) <= gens[1]]
     n_rand = random.randint(0, len(filtered_data)-1)
     random_pokemon = filtered_data[n_rand]
-    #print(random_pokemon[0]) # Debugging purposes
+    print(random_pokemon[0]) # Debugging purposes
     tries = min(9, max(gens[1] - gens[0] + 2, 6))
 
     results = [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "]
     print("\nI have thought of a pokemon, try to guess it (you have " + str(tries) + " tries): ")
-
+    used_dex = False
+    guessed_right = ["", "", 0]
+    
     while(tries > 0):   
-        tries -= 1
-        aux = input()
+        if tries <= 2 and not used_dex:
+            print("Would you like to be shown a list of all the pokemons that are from the generation and have the type(s) that you have guessed right? (y/n)")
+            if input() == 'y':
+                dex(filtered_data, guessed_right)
+                used_dex = True
+                print("You have " + str(tries) + " tries left")
+            else:
+                print("You have " + str(tries) + " tries left")
 
+        aux = input()
+        tries -= 1
+        
         if aux == 'help':
             help()
             tries += 1
@@ -28,7 +39,7 @@ def game(gens: list[int]):
             tries += 1
             break
         elif ' -' in aux:
-            options(aux.split(' -'), filtered_data, tries)
+            options(aux.split(' -'), filtered_data)
             tries += 1
         else:
             guess = aux
@@ -67,8 +78,16 @@ def game(gens: list[int]):
                     i += 1
 
                 print_results(results)
+
+            if results[0] == " ✓ " or results[1] == " ⇄ ":
+                guessed_right[0] = random_pokemon[1]
+            if results[1] == " ✓ " or results[0] == " ⇄ ":
+                guessed_right[1] = random_pokemon[2]
+            if results[2] == " ✓ ":
+                guessed_right[2] = random_pokemon[3]
+
         print("You have " + str(tries) + " tries left")
 
-    if tries == 0:
-        print("\nYou have run out of tries, the pokemon was " + random_pokemon[0] + ".\n")
-        show_picture(random_pokemon[0])
+        if tries == 0:
+            print("\nYou have run out of tries, the pokemon was " + random_pokemon[0] + ".\n")
+            show_picture(random_pokemon[0].lower())
