@@ -14,7 +14,7 @@ def choose_generations() -> list[int]:
         return [1, 9]
     else:
         if '-' in gen_input:
-            if  1 <= gen_input.split('-')[0] <= 9 and 1 <= gen_input.split('-')[1] <= 9:
+            if  1 <= int(gen_input.split('-')[0]) <= 9 and 1 <= int(gen_input.split('-')[1]) <= 9:
                 if gen_input.split('-')[0] <= gen_input.split('-')[1]:
                     return [int(gen_input.split('-')[0]), int(gen_input.split('-')[1])]
                 else:
