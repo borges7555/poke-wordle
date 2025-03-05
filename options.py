@@ -15,6 +15,7 @@ def options(array: list[str], data: list):
 
 
 def dex(data: list, guessed_right: list):
+    print("")
     for pokemon in data:
         name, type1, type2, generation = pokemon[0], pokemon[1], pokemon[2], pokemon[3]
         if guessed_right[2] != 0:
