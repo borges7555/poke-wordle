@@ -7,6 +7,10 @@ def main() -> int:
     print("Type 'help' for instructions, 'exit' to leave or press 'Enter' to start the game.")
     aux = input()
 
+    while aux != 'help' and aux != 'exit' and aux != '':
+        print("\nInvalid input. Try again.")
+        aux = input()
+        
     if aux == 'help':
         help()
         print("If you want to see this again, type 'help'.")
@@ -14,6 +18,7 @@ def main() -> int:
         input()
     elif aux == 'exit':
         return 0
+        
 
     print("Choose the generations you want the pokemon to be from (1-9): ")
     gens = choose_generations()

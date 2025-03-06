@@ -4,14 +4,16 @@ from prints import print_stats
 def options(array: list[str], data: list):
     if array[1] in ['s', '-stats']:
         print_stats(array, data)
-    if array[1] in ['p', '-picture']:
+    elif array[1] in ['p', '-picture']:
         show_picture(array[0].lower())
-    if array[1] in ['l', '-list']:
+    elif array[1] in ['l', '-list']:
         print("")
         for i in data:
             if array[0] in i[0].lower():
                 print(i[0])
         print("")
+    else:
+        print("\nInvalid option.")
 
 
 def dex(data: list, guessed_right: list):
