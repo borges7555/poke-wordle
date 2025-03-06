@@ -16,15 +16,15 @@ def options(array: list[str], data: list):
         print("\nInvalid option.")
 
 
-def dex(data: list, guessed_right: list):
+def dex(data: list, guessed_right: list, guessed_wrong_types: list, guessed_wrong_gens: list):
     print("")
     for pokemon in data:
         name, type1, type2, generation = pokemon[0], pokemon[1], pokemon[2], pokemon[3]
         if guessed_right[2] != 0:
             if generation == guessed_right[2]:
-                if (type1 == guessed_right[0] or guessed_right[0] == "") and (type2 == guessed_right[1] or guessed_right[1] == ""):
+                if (type1 == guessed_right[0] or guessed_right[0] == "") and (type2 == guessed_right[1] or guessed_right[1] == "") and type1 not in guessed_wrong_types and type2 not in guessed_wrong_types:
                     print(name)
         else:
-            if (type1 == guessed_right[0] or guessed_right[0] == "") and (type2 == guessed_right[1] or guessed_right[1] == ""):
+            if (type1 == guessed_right[0] or guessed_right[0] == "") and (type2 == guessed_right[1] or guessed_right[1] == "") and type1 not in guessed_wrong_types and type2 not in guessed_wrong_types and generation not in guessed_wrong_gens:
                 print(name)
     print("")
