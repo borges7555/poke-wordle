@@ -1,4 +1,5 @@
 from prints import help
+import sys
 
 def choose_generations() -> list[int]:
     gen_input = input()
@@ -9,7 +10,7 @@ def choose_generations() -> list[int]:
         print("\nChoose the generations you want the pokemon to be from (1-9): ")
         return choose_generations()
     elif gen_input == 'exit':
-        return [0, 0]
+        sys.exit(1)
     elif not gen_input:
         return [1, 9]
     else:

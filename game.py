@@ -1,6 +1,7 @@
 import random
+import sys
 from create_map import create_map_from_csv
-from prints import help, print_results
+from prints import help, print_results, print_stats
 from options import options, dex
 from show_pic import show_picture
 
@@ -25,7 +26,7 @@ def game(gens: list[int]):
                 used_dex = True
                 print("You have " + str(tries) + " tries left")
             else:
-                print("You have " + str(tries) + " tries left")
+                print("\nYou have " + str(tries) + " tries left")
 
         aux = input()
         tries -= 1
@@ -36,8 +37,7 @@ def game(gens: list[int]):
             print("Press 'Enter' to continue.")
             input()
         elif aux == 'exit':
-            tries += 1
-            break
+            sys.exit(1)
         elif ' -' in aux:
             options(aux.split(' -'), filtered_data)
             tries += 1
@@ -90,4 +90,5 @@ def game(gens: list[int]):
 
         if tries == 0:
             print("\nYou have run out of tries, the pokemon was " + random_pokemon[0] + ".\n")
+            print_stats(random_pokemon[0], filtered_data)
             show_picture(random_pokemon[0].lower())

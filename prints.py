@@ -10,8 +10,8 @@ def help():
     print("You have a limited number of tries to guess the pokemon.")  
 
 
-def print_stats(array: list[str], data: list):
-    info = next((row for row in data if row[0].lower() == array[0].lower()), None)
+def print_stats(name: str, data: list):
+    info = next((row for row in data if row[0].lower() == name.lower()), None)
     if info != None:
         print("\n" + info[0] + ":")
         print("Type 1: " + info[1])
