@@ -88,20 +88,21 @@ def game(gens: list[int]):
             if results[2] == " ✓ ":
                 guessed_right[2] = random_pokemon[3]
 
-            if guessed_pokemon[1] not in guessed_wrong_types:
-                if results[0] == ' x ':
-                    guessed_wrong_types.append(guessed_pokemon[1])
-            if random_pokemon[2] not in guessed_wrong_types:
-                if results[1] == ' x ':
-                    guessed_wrong_types.append(guessed_pokemon[2])
+            if guessed_pokemon != None:
+                if guessed_pokemon[1] not in guessed_wrong_types:
+                    if results[0] == ' x ':
+                        guessed_wrong_types.append(guessed_pokemon[1])
+                if random_pokemon[2] not in guessed_wrong_types:
+                    if results[1] == ' x ':
+                        guessed_wrong_types.append(guessed_pokemon[2])
 
-            if guessed_pokemon[3] not in guessed_wrong_gens:
-                if results[2] == ' ↑ ':
-                    for i in range(1, int(guessed_pokemon[3]) + 1):
-                        guessed_wrong_gens.append(i)
-                if results[2] == ' ↓ ':
-                    for i in range(int(guessed_pokemon[3]), 10):
-                        guessed_wrong_gens.append(i)
+                if guessed_pokemon[3] not in guessed_wrong_gens:
+                    if results[2] == ' ↑ ':
+                        for i in range(1, int(guessed_pokemon[3]) + 1):
+                            guessed_wrong_gens.append(i)
+                    if results[2] == ' ↓ ':
+                        for i in range(int(guessed_pokemon[3]), 10):
+                            guessed_wrong_gens.append(i)
 
         print("You have " + str(tries) + " tries left")
 
