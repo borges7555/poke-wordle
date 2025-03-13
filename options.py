@@ -4,6 +4,7 @@ from prints import print_stats
 def options(array: list[str], data: list):
     if array[1] in ['s', '-stats']:
         print_stats(array[0], data)
+        print("")
     elif array[1] in ['p', '-picture']:
         show_picture(array[0].lower())
     elif array[1] in ['l', '-list']:

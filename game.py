@@ -107,6 +107,6 @@ def game(gens: list[int]):
         print("You have " + str(tries) + " tries left")
 
         if tries == 0:
-            print("\nYou have run out of tries, the pokemon was " + random_pokemon[0] + ".\n")
+            print("\nYou have run out of tries, the pokemon was " + random_pokemon[0] + ".")
             print_stats(random_pokemon[0], filtered_data)
             show_picture(random_pokemon[0].lower())
