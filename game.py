@@ -55,7 +55,7 @@ def game(gens: list[int]):
                     results[i] = " ✓ "
 
                 print_results(results)
-                print("Congratulations, you guessed it right! It was " + random_pokemon[0] + "!\n")
+                print("Congratulations, you guessed it right! It was " + random_pokemon[0] + "!")
                 show_picture(random_pokemon[0].lower())
                 break
             else:      

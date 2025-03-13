@@ -12,6 +12,7 @@ def print_file(filepath: str) -> None:
         print(f.read())
 
 def show_pokemon_by_name(name: str, form: str = "") -> None:
+    print("")
     base_path = COLORSCRIPTS_DIR
     color_subdir =  REGULAR_SUBDIR
     size_subdir =  SMALL_SUBDIR
