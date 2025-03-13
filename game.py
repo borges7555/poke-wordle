@@ -11,7 +11,7 @@ def game(gens: list[int]):
     n_rand = random.randint(0, len(filtered_data)-1)
     random_pokemon = filtered_data[n_rand]
     #print(random_pokemon[0]) # Debugging purposes
-    tries = min(9, max(gens[1] - gens[0] + 2, 6))
+    tries = min(9, max(gens[1] - gens[0] + 2, 7))
 
     results = [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "]
     print("\nI have thought of a pokemon, try to guess it (you have " + str(tries) + " tries): ")
