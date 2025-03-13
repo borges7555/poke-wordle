@@ -22,7 +22,7 @@ def print_stats(name: str, data: list):
         print("Def: " + str(info[6]))
         print("Spa: " + str(info[7]))
         print("Spd: " + str(info[8]))
-        print("Spe: " + str(info[9]) + "\n")
+        print("Spe: " + str(info[9]))
     else:
         print("\nPokemon not found, try again: ")
 
