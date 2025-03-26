@@ -1,9 +1,10 @@
 import json
 import os
+from create_map import get_file_path
 
 PROGRAM = os.path.realpath(__file__)
 PROGRAM_DIR = os.path.dirname(PROGRAM)
-COLORSCRIPTS_DIR = f"{PROGRAM_DIR}/colorscripts"
+COLORSCRIPTS_DIR = get_file_path("colorscripts")
 REGULAR_SUBDIR = "regular"
 SMALL_SUBDIR = "small"
 
@@ -16,7 +17,8 @@ def show_pokemon_by_name(name: str, form: str = "") -> None:
     base_path = COLORSCRIPTS_DIR
     color_subdir =  REGULAR_SUBDIR
     size_subdir =  SMALL_SUBDIR
-    with open(f"{PROGRAM_DIR}/pokemon.json") as file:
+    json_path = get_file_path("pokemon.json")
+    with open(f"{json_path}") as file:
         pokemon_json = json.load(file)
         pokemon_names = {pokemon["name"] for pokemon in pokemon_json}
         if name not in pokemon_names:

@@ -28,17 +28,19 @@ def print_stats(name: str, data: list):
 
 
 def print_results(results: list[str]):
-    type1 = "| Type 1:"
-    type2 = "| Type 2:"
-    gen = "| Gen:"
-    hp = "| HP:"
-    att = "| Att:"
-    deff = "| Def:"
-    spa = "| Spa:"
-    spd = "| Spd:"
-    spe = "| Spe:"
-    output = type1 + results[0] + type2 + results[1] + gen + results[2] + hp + results[3] + att + results[4] + deff + results[5] + spa + results[6] + spd + results[7] + spe + results[8] + "|"
-    print(" " + "_" * 11 + " " + "_" * 11 + " " + "_" * 8 + " " + "_" * 7 + " " + "_" * 8 + " " + "_" * 8 + " " + "_" * 8 + " " + "_" * 8 + " " + "_" * 8)
-    print("|" + " " * 11 + "|" + " " * 11 + "|" + " " * 8 + "|" + " " * 7 + "|" + " " * 8 + "|" + " " * 8 + "|" + " " * 8 + "|" + " " * 8 + "|" + " " * 8 + "|")
+    type1 = "│ Type 1:"
+    type2 = "│ Type 2:"
+    gen = "│ Gen:"
+    hp = "│ HP:"
+    att = "│ Att:"
+    deff = "│ Def:"
+    spa = "│ Spa:"
+    spd = "│ Spd:"
+    spe = "│ Spe:"
+    output = type1 + results[0] + type2 + results[1] + gen + results[2] + hp + results[3] + att + results[4] + deff + results[5] + spa + results[6] + spd + results[7] + spe + results[8] + "│"
+    print()
+    print("┌" + "─" * 11 + "┬" + "─" * 11 + "┬" + "─" * 8 + "┬" + "─" * 7 + "┬" + "─" * 8 + "┬" + "─" * 8 + "┬" + "─" * 8 + "┬" + "─" * 8 + "┬" + "─" * 8 + "┐")
+    print("│" + " " * 11 + "│" + " " * 11 + "│" + " " * 8 + "│" + " " * 7 + "│" + " " * 8 + "│" + " " * 8 + "│" + " " * 8 + "│" + " " * 8 + "│" + " " * 8 + "│")
     print(output)
-    print("|" + "_" * 11 + "|" + "_" * 11 + "|" + "_" * 8 + "|" + "_" * 7 + "|" + "_" * 8 + "|" + "_" * 8 + "|" + "_" * 8 + "|" + "_" * 8 + "|" + "_" * 8 + "|" + "\n")
+    print("│" + " " * 11 + "│" + " " * 11 + "│" + " " * 8 + "│" + " " * 7 + "│" + " " * 8 + "│" + " " * 8 + "│" + " " * 8 + "│" + " " * 8 + "│" + " " * 8 + "│")
+    print("└" + "─" * 11 + "┴" + "─" * 11 + "┴" + "─" * 8 + "┴" + "─" * 7 + "┴" + "─" * 8 + "┴" + "─" * 8 + "┴" + "─" * 8 + "┴" + "─" * 8 + "┴" + "─" * 8 + "┘" + "\n")

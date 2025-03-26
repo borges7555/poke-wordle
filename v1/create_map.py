@@ -7,7 +7,7 @@ def get_file_path(filename):
     if getattr(sys, 'frozen', False):  # Running as an executable
         base_path = sys._MEIPASS  # The temporary folder PyInstaller uses
     else:
-        base_path = os.path.dirname(__file__)  # Normal execution, use current directory
+        base_path = os.path.dirname("../")  # Normal execution, use current directory
 
     return os.path.join(base_path, filename)
 

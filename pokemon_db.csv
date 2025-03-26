@@ -578,12 +578,12 @@ Uxie,Psychic,None,4,75,75,130,75,130,95
 Mesprit,Psychic,None,4,80,105,105,105,105,80
 Azelf,Psychic,None,4,75,125,70,125,70,115
 Dialga,Steel,Dragon,4,100,120,120,150,100,90
-Origin Dialga,Steel,Dragon,4,100,100,120,150,120,90
+Origin Dialga,Steel,Dragon,9,100,100,120,150,120,90
 Palkia,Water,Dragon,4,90,120,100,150,120,100
-Origin Palkia,Water,Dragon,4,90,100,100,150,120,120
+Origin Palkia,Water,Dragon,9,90,100,100,150,120,120
 Heatran,Fire,Steel,4,91,90,106,130,106,77
 Regigigas,Normal,None,4,110,160,110,80,110,100
-Altered Giratina,Ghost,Dragon,4,150,100,120,100,120,90
+Giratina,Ghost,Dragon,4,150,100,120,100,120,90
 Origin Giratina,Ghost,Dragon,4,150,120,100,120,100,90
 Cresselia,Psychic,None,4,120,70,110,75,120,85
 Phione,Water,None,4,80,80,80,80,80,80
