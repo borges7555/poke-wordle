@@ -37,6 +37,8 @@ def main() -> int:
 
         if aux == 'n':
             play_again = False
+
+        print()
         
     return 0
 
