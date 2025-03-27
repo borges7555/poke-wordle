@@ -1,7 +1,7 @@
 import random
 import sys
 from create_map import create_map_from_csv
-from prints import help, print_results, print_stats
+from prints import help, print_results, print_stats, types_left
 from options import options, dex
 from show_pic import show_picture
 
@@ -40,6 +40,10 @@ def game(gens: list[int]):
             input()
         elif aux == 'exit':
             sys.exit(1)
+        elif aux == "types-left":
+            guessed_types = guessed_right[:2] + guessed_wrong_types
+            types_left(guessed_types)
+            tries += 1
         elif ' -' in aux:
             options(aux.split(' -'), filtered_data)
             tries += 1

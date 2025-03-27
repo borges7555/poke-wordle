@@ -7,6 +7,7 @@ def help():
     print("When inside the game, if you want to see the stats of a pokemon, type its name followed by ' -s' or '--stats.")
     print("If you want to see the pokemon's picture, type its name followed by ' -p' or '--picture'.")
     print("If you want to see a list of pokemons that contain a certain string, type the string followed by ' -l' or '--list'.")
+    print("If you want to see a list of all the types that you haven't guessed yet, type 'types-left'.")
     print("You have a limited number of tries to guess the pokemon.")  
 
 
@@ -44,3 +45,14 @@ def print_results(results: list[str]):
     print(output)
     print("│" + " " * 11 + "│" + " " * 11 + "│" + " " * 8 + "│" + " " * 7 + "│" + " " * 8 + "│" + " " * 8 + "│" + " " * 8 + "│" + " " * 8 + "│" + " " * 8 + "│")
     print("└" + "─" * 11 + "┴" + "─" * 11 + "┴" + "─" * 8 + "┴" + "─" * 7 + "┴" + "─" * 8 + "┴" + "─" * 8 + "┴" + "─" * 8 + "┴" + "─" * 8 + "┴" + "─" * 8 + "┘" + "\n")
+
+
+def types_left(types_guessed: list[str]):
+    all_types = ["Normal", "Fire", "Water", "Electric", "Grass", "Ice", "Fighting", "Poison", "Ground", "Flying", "Psychic", "Bug", "Rock", "Ghost", "Dragon", "Dark", "Steel", "Fairy", "None"]
+    print()
+    for type_ in all_types:
+        if type_ not in types_guessed:
+            print(type_)
+
+    print()
+

@@ -22,7 +22,7 @@ def show_pokemon_by_name(name: str, form: str = "") -> None:
         pokemon_json = json.load(file)
         pokemon_names = {pokemon["name"] for pokemon in pokemon_json}
         if name not in pokemon_names:
-            print(f"Couldn't show picture of {name}")
+            print(f"Couldn't show picture of {name}\n")
             return
 
         if form:

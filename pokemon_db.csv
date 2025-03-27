@@ -37,10 +37,10 @@ Sandshrew,Ground,None,1,50,75,85,20,30,40
 Alolan Sandshrew,Ice,Steel,7,50,75,90,10,35,40
 Sandslash,Ground,None,1,75,100,110,45,55,65
 Alolan Sandslash,Ice,Steel,7,75,100,120,25,65,65
-Nidoran♀,Poison,None,1,55,47,52,40,40,41
+Nidoran-f,Poison,None,1,55,47,52,40,40,41
 Nidorina,Poison,None,1,70,62,67,55,55,56
 Nidoqueen,Poison,Ground,1,90,92,87,75,85,76
-Nidoran♂,Poison,None,1,46,57,40,40,40,50
+Nidoran-m,Poison,None,1,46,57,40,40,40,50
 Nidorino,Poison,None,1,61,72,57,55,55,65
 Nidoking,Poison,Ground,1,81,102,77,85,75,85
 Clefairy,Fairy,None,1,70,45,48,60,65,35
