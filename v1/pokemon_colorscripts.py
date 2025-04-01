@@ -12,8 +12,7 @@ def print_file(filepath: str) -> None:
     with open(filepath, "r") as f:
         print(f.read())
 
-def show_pokemon_by_name(name: str, form: str = "") -> None:
-    print("")
+def show_pokemon_by_name(name: str, form: str = "") -> bool:
     base_path = COLORSCRIPTS_DIR
     color_subdir =  REGULAR_SUBDIR
     size_subdir =  SMALL_SUBDIR
@@ -22,8 +21,8 @@ def show_pokemon_by_name(name: str, form: str = "") -> None:
         pokemon_json = json.load(file)
         pokemon_names = {pokemon["name"] for pokemon in pokemon_json}
         if name not in pokemon_names:
-            print(f"Couldn't show picture of {name}\n")
-            return
+            #print(f"Couldn't show picture of {name}\n")
+            return False
 
         if form:
             for pokemon in pokemon_json:
@@ -40,6 +39,9 @@ def show_pokemon_by_name(name: str, form: str = "") -> None:
                     print(f"Available alternate forms are")
                     for form in alternate_forms:
                         print(f"- {form}")
-                return
+                return False
+            
     pokemon_file = f"{base_path}/{size_subdir}/{color_subdir}/{name}"
+    print("")
     print_file(pokemon_file)
+    return True

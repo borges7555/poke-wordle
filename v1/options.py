@@ -6,7 +6,8 @@ def options(array: list[str], data: list):
         print_stats(array[0], data)
         print("")
     elif array[1] in ['p', '-picture']:
-        show_picture(array[0].lower())
+        if not show_picture(array[0].lower()):
+            print(f"\nCouldn't show picture of {array[0]}\n")
     elif array[1] in ['l', '-list']:
         print("")
         for i in data:

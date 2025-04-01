@@ -26,9 +26,9 @@ def game(gens: list[int]):
             if input() == 'y':
                 dex(filtered_data, guessed_right, guessed_wrong_types, guessed_wrong_gens)
                 used_dex = True
-                print("You have " + str(tries) + " tries left")
+                print("You have " + str(tries) + " tries left: ")
             else:
-                print("\nYou have " + str(tries) + " tries left")
+                print("\nYou have " + str(tries) + " tries left: ")
 
         aux = input()
         tries -= 1
@@ -108,7 +108,7 @@ def game(gens: list[int]):
                         for i in range(int(guessed_pokemon[3]), 10):
                             guessed_wrong_gens.append(i)
 
-        print("You have " + str(tries) + " tries left")
+        print("You have " + str(tries) + " tries left: ")
 
         if tries == 0:
             print("\nYou have run out of tries, the pokemon was " + random_pokemon[0] + ".")
