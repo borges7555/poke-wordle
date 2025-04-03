@@ -751,14 +751,14 @@ Volcarona,Bug,Fire,5,85,60,65,135,105,100
 Cobalion,Steel,Fighting,5,91,90,129,90,72,108
 Terrakion,Rock,Fighting,5,91,129,90,72,90,108
 Virizion,Grass,Fighting,5,91,90,72,90,129,108
-Incarnate Tornadus,Flying,None,5,79,115,70,125,80,111
-Therian Tornadus,Flying,None,5,79,100,80,110,90,121
-Incarnate Thundurus,Electric,Flying,5,79,115,70,125,80,111
-Therian Thundurus,Electric,Flying,5,79,105,70,145,80,101
+Tornadus Incarnate,Flying,None,5,79,115,70,125,80,111
+Tornadus Therian,Flying,None,5,79,100,80,110,90,121
+Thundurus Incarnate,Electric,Flying,5,79,115,70,125,80,111
+Thundurus Therian,Electric,Flying,5,79,105,70,145,80,101
 Reshiram,Dragon,Fire,5,100,120,100,150,120,90
 Zekrom,Dragon,Electric,5,100,150,120,120,100,90
-Incarnate Landorus,Ground,Flying,5,89,125,90,115,80,101
-Therian Landorus,Ground,Flying,5,89,145,90,105,80,91
+Landorus Incarnate,Ground,Flying,5,89,125,90,115,80,101
+Landorus Therian,Ground,Flying,5,89,145,90,105,80,91
 Kyurem,Dragon,Ice,5,125,130,90,130,90,95
 White Kyurem,Dragon,Ice,5,125,120,90,170,100,95
 Black Kyurem,Dragon,Ice,5,125,170,100,120,90,95
@@ -1050,8 +1050,8 @@ Male Basculegion,Water,Ghost,8,120,112,65,80,75,78
 Female Basculegion,Water,Ghost,8,120,92,65,100,75,78
 Sneasler,Fighting,Poison,8,80,130,60,40,80,120
 Overqwil,Dark,Poison,8,85,115,95,65,65,85
-Incarnate Enamorus,Fairy,Flying,8,74,115,70,135,80,106
-Therian Enamorus,Fairy,Flying,8,74,115,110,135,100,46
+Enamorus Incarnate,Fairy,Flying,8,74,115,70,135,80,106
+Enamorus Therian,Fairy,Flying,8,74,115,110,135,100,46
 Sprigatito,Grass,None,9,40,61,54,45,45,65
 Floragato,Grass,None,9,61,80,63,60,63,83
 Meowscarada,Grass,Dark,9,76,110,70,81,70,123
