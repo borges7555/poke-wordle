@@ -20,7 +20,7 @@ def show_picture(name: str) -> bool:
         return show_pokemon_by_name(name.split(" ")[1], "primal")
     elif len(name.split(" ")) == 2:
         if not show_pokemon_by_name(name.split(" ")[0], name.split(" ")[1]):
-            if not show_pokemon_by_name(name.split(" ")[0], "regular"):
+            if not show_pokemon_by_name(name.split(" ")[1], name.split(" ")[0]):
                 if not show_pokemon_by_name(name.split(" ")[0] + "-" + name.split(" ")[1]):
                     return False
                 else:
